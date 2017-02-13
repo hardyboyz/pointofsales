@@ -24,6 +24,9 @@
                                 }
                             ?>
                             <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+							Company ID
+                            <input type="text" name="company_id" class="form-control">
+                            <br>
                             Username
                             <input type="text" name="username" class="form-control">
                             <br>

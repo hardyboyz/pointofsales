@@ -3,7 +3,7 @@
 			</div> <!-- end row -->
 		</div>
 		<footer>
-			Copyright &copy; 2016 <a href="http://digitalbarkah.com" target="_blank">Education & Computer Centre</a>
+			Copyright &copy; <?php echo date('Y') ?> <a href="#" target="_blank">Digit Al-Barkah - IT Solution</a>
 		</footer>
     </body>
 </html>

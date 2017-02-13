@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
 
             $value = "<select class='form-control full-width form-filter select ".$class."' id='".$id."' name='".$id."' ".$attr_data." data-filter='".$id."'>";
-            $val = '<option value="">SEMUA</option>';
+            $val = '<option value="">=All=</option>';
             foreach ($data as $key => $values) {
                 $val .= "<option value='".htmlspecialchars($key)."'>".htmlspecialchars($values)."</option>";
             }

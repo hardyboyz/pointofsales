@@ -7,7 +7,7 @@
     <head>
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" href="<?php echo base_url('application/azkasir/default/assets/images/favicon.png');?>" />
-        <title>EC Centre Point of Sales</title>
+        <title>Point of Sales</title>
 
         <?php
         	$this->load->helper("az_headscript");

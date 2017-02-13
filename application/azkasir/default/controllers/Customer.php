@@ -17,7 +17,7 @@ class Customer extends CI_Controller {
 
 		$this->load->library('AZAppCRUD');
 		$crud = $this->azappcrud;
-
+		//$crud->add_where(array('company_id'=>$this->session->company_id));
 		$column = array('#', azlang('Name'), azlang('Gender'), azlang('Address'), azlang('Phone'), azlang('Action'));
 		$crud->set_column($column);
 		$crud->set_width("10px, , , , , 120px");
@@ -86,6 +86,7 @@ class Customer extends CI_Controller {
 				"address" => $data_post["address"],
 				"phone" => $data_post["phone"],
 				"updated" => Date("Y-m-d H:i:s"),
+				"company_id" => $this->session->userdata("company_id"),
 				"updatedby" => $this->session->userdata("username")
 			);
 

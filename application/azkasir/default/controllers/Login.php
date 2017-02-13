@@ -18,9 +18,11 @@ class Login extends CI_Controller {
 		$this->load->helper("az_core");
 		$username = azarr($_POST, "username");
 		$password = azarr($_POST, "password");
+		$company_id = azarr($_POST, "company_id");
 
 		$this->db->where("username", $username);
 		$this->db->where("password", md5($password));
+		$this->db->where("company_id", $company_id);
 		$data = $this->db->get("user");
 
 		if ($data->num_rows() > 0) {
@@ -28,11 +30,13 @@ class Login extends CI_Controller {
 			$data_id = $data->row()->iduser;
 			$data_user_type = az_get_user_type($data_id);
 			$data_nama_user = $data->row()->name;
+			$company_id = $data->row()->company_id;
 
 			$this->session->set_userdata("username", $data_username);
 			$this->session->set_userdata("iduser", $data_id);
 			$this->session->set_userdata("user_type", $data_user_type);
 			$this->session->set_userdata("name", $data_nama_user);
+			$this->session->set_userdata("company_id", $company_id);
 
 			$this->load->helper("string");
 			$str = random_string("alnum", 16);

@@ -213,9 +213,7 @@
             <div class="thanks">
                 ~~~ <?php echo azlang('Thank You');?> ~~~
             </div>
-            <div class="azost">
-                EC - Education & Computer - Centre
-            </div>
+            
         </div>
     </body>
 </html>
